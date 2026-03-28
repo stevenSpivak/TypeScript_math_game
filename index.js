@@ -107,7 +107,7 @@ function startGame1players(difficulty) {
                                     console.log("What is ".concat(num1, " - ").concat(num2, " ?"));
                                     break;
                                 case 4:
-                                    correct = num1 / num2;
+                                    correct = Math.floor((num1 / num2) * 100) / 100;
                                     console.log("What is ".concat(num1, " / ").concat(num2, " ?"));
                                     break;
                             }
@@ -218,7 +218,7 @@ function startGame2players(difficulty) {
                                     console.log("What is ".concat(num1, " - ").concat(num2, " ?"));
                                     break;
                                 case 4:
-                                    correct = num1 / num2;
+                                    correct = Math.floor((num1 / num2) * 100) / 100;
                                     console.log("What is ".concat(num1, " / ").concat(num2, " ?"));
                                     break;
                             }
@@ -272,7 +272,7 @@ function startGame() {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, Promise.race([
-                        askQuestion("1 or 2 players?")
+                        askQuestion("1 or 2 players? ")
                     ])];
                 case 1:
                     playersAmount = _a.sent();

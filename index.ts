@@ -69,7 +69,7 @@ while (correctAnswers < 10*difficulty) {
                     console.log(`What is ${num1} - ${num2} ?`);
                     break;
                 case 4:
-                    correct = num1 / num2;
+                    correct = Math.floor((num1 / num2) * 100) / 100;
                     console.log(`What is ${num1} / ${num2} ?`);
                     break;
             }
@@ -179,7 +179,7 @@ async function startGame2players(difficulty: number): Promise<void> {
                     console.log(`What is ${num1} - ${num2} ?`);
                     break;
                 case 4:
-                    correct = num1 / num2;
+                    correct = Math.floor((num1 / num2) * 100) / 100;
                     console.log(`What is ${num1} / ${num2} ?`);
                     break;
             }
